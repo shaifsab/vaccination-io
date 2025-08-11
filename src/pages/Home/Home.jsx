@@ -1,13 +1,11 @@
-/* eslint-disable no-unused-vars */
-import React from 'react'
-import Banner from '../../components/Banner/Banner'
-import Ad from '../../components/Ad/Ad'
-import Result from '../../components/Result/Result'
-import Protects from '../../components/Protects/Protects'
-import Registration from '../../components/Registration/Registration'
-import Symptoms from '../../components/Symptoms/Symptoms'
-import Feedback from '../../components/Feedback/Feedback'
-import Footer from '../../components/Footer/Footer'
+import Banner from '../../components/Banner/Banner.jsx'
+import Ad from '../../components/Ad/Ad.jsx'
+import Result from '../../components/Result/Result.jsx'
+import Protects from '../../components/Protects/Protects.jsx'
+import Registration from '../../components/Registration/Registration.jsx'
+import Symptoms from '../../components/Symptoms/Symptoms.jsx'
+import Feedback from '../../components/Feedback/Feedback.jsx'
+import Footer from '../../components/Footer/Footer.jsx'
 
 
 

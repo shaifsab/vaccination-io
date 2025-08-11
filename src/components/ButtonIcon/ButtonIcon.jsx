@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './ButtonICon.module.css'
+import style from './ButtonIcon.module.css'
 
 
 

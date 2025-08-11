@@ -1,0 +1,77 @@
+.ResNavPage{
+    @apply absolute w-full lg:hidden pt-[50px];
+}
+.menuRow{
+    @apply flex items-center justify-between;
+}
+.menuRow .menuLogo img{
+    @apply w-[142px] md:w-[200px]
+}
+.menuLogo {
+  position: relative;
+  display: inline-block;
+}
+
+.menuLogo img {
+  display: block;
+}
+
+.menuLogo::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px; 
+  width: 0;
+  border-radius: 100px;
+  background-color: #17C2EC; 
+  transition: width 0.5s ease-out;
+}
+
+.menuLogo:hover::after {
+  width: 100%; 
+}
+.menuIcon{
+    @apply w-[45px] h-[45px] rounded-[10px] bg-[rgba(196,196,196,0.15)] text-white p-[7px] shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]
+}
+.menuItems {
+    @apply w-full p-5 rounded-[10px] bg-brandColor absolute top-0 right-0 ;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes popMenu {
+    0% {
+      top: -400px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+  
+  @keyframes reversePopMenu {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: -400px;
+    }
+  }
+  
+  .menuItems.show {
+    animation-name: popMenu;
+  }
+  
+  .menuItems.hide {
+    animation-name: reversePopMenu;
+  }
+  
+.menuItems .cancelIcon{
+    @apply text-2xl ml-auto ;
+}
+.menuItems ul{
+    @apply flex flex-col gap-[10px] items-center 
+}
+.menuItems ul li a{
+    @apply font-montserrat font-semibold text-[15px] text-[rgba(255,255,255,.50)]
+}

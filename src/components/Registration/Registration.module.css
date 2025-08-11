@@ -1,0 +1,155 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+/* Main Registration Page */
+.registrationPage {
+  @apply bg-[rgba(255,255,255,0.50)];
+  /* Set the background with transparency */
+}
+
+.items {
+  @apply flex justify-between flex-wrap gap-[20px];
+  /* Allow items to wrap on smaller screens */
+}
+
+/* Feedback Card Styling */
+.feedbackCard {
+  @apply w-[100%] max-w-[650px] bg-white p-[20px] rounded-[20px];
+  /* Make the feedback card responsive and allow it to scale */
+}
+
+.feedbackCard h1 {
+  @apply text-black font-montserrat font-bold text-[48px] mt-[28px] mb-[52px];
+  /* Adjust heading style */
+}
+
+/* Form Fields */
+.formPatient h4 {
+  @apply text-black font-montserrat font-bold text-[24px];
+}
+
+.formPatient input {
+  @apply w-full max-w-[650px] h-[70px] mt-[20px] mb-[40px] rounded-[29px] text-[rgba(0,0,0,0.25)] font-montserrat font-medium text-[24px] pl-[30px] bg-[rgba(11,21,60,0.15)];
+  /* Ensure inputs take full width and are responsive */
+}
+
+/* Mobile Number Section */
+.mobileNumber h4 {
+  @apply text-black font-montserrat font-bold text-[24px];
+}
+
+.mobileNumber p {
+  @apply text-[rgba(0,0,0,0.50)] font-montserrat font-medium text-[20px] py-[20px];
+}
+
+.dropdown {
+  @apply flex gap-[20px];
+  /* Adjust gap between select and button */
+}
+
+.dropdown button {
+  @apply text-white font-montserrat font-bold text-[24px] bg-brandColor py-[20px] px-[50px] rounded-[20px] inline-block hover:bg-[#7195be] transition-all duration-75;
+  /* Style the dropdown button */
+}
+
+/* Submit Button */
+.submitBtn button {
+  @apply text-white font-montserrat font-bold text-[24px] mt-[20px] mb-[40px] bg-brandColor py-[20px] px-[250px] rounded-[20px] inline-block hover:bg-[#7195be] transition-all duration-75;
+  /* Adjust button size and alignment */
+}
+
+/* Link Button Styling */
+.linkBtn {
+  @apply flex gap-[46px] justify-center;
+}
+
+.linkBtn span {
+  @apply text-[rgba(0,0,0,0.50)] font-montserrat font-semibold text-[20px] hover:text-[#17C2EC] hover:font-bold mb-[33px];
+  /* Style the link text */
+}
+
+/* Right Side Image Styling */
+.imageLeft {
+  @apply w-[100%] max-w-[400px] relative mt-[75px];
+  /* Adjust width for responsiveness */
+}
+
+.verifyBtn {
+  @apply absolute bottom-[160px] left-1/2 -translate-x-1/2 text-white font-montserrat font-bold text-[20px] mt-[20px] mb-[40px] bg-[rgba(196,196,196,0.25)] py-[13px] px-[33px] rounded-[20px] inline-block hover:bg-[#7195be] transition-all duration-75;
+  /* Center the verify button */
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .feedbackCard {
+    @apply w-[90%] max-w-[600px]; /* Make the card more flexible on medium screens */
+  }
+
+  .formPatient input {
+    @apply w-[90%]; /* Adjust input size for medium screens */
+  }
+
+  .submitBtn button {
+    @apply px-[150px]; /* Adjust button padding */
+  }
+
+  .imageLeft {
+    @apply w-[100%] max-w-[350px]; /* Adjust image width for medium screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  .feedbackCard {
+    @apply w-[90%] max-w-[500px]; /* Adjust card size for tablets */
+  }
+
+  .formPatient input {
+    @apply w-[90%]; /* Ensure inputs take full width */
+  }
+
+  .submitBtn button {
+    @apply px-[100px]; /* Adjust button padding for smaller devices */
+  }
+
+  .linkBtn {
+    @apply flex-col items-center gap-[10px]; /* Stack the link buttons */
+  }
+
+  .imageLeft {
+    @apply w-[100%] max-w-[300px]; /* Make the image take full width */
+  }
+
+  .verifyBtn {
+    @apply bottom-[120px]; /* Adjust button position */
+  }
+}
+
+@media (max-width: 768px) {
+  .feedbackCard {
+    @apply w-[100%] max-w-[400px]; /* Full width for mobile */
+  }
+
+  .formPatient input {
+    @apply w-[100%]; /* Ensure inputs take full width */
+  }
+
+  .submitBtn button {
+    @apply px-[80px]; /* Adjust button padding for mobile */
+  }
+
+  .linkBtn {
+    @apply flex-col items-center gap-[10px]; /* Stack link items for mobile */
+  }
+
+  .imageLeft {
+    @apply w-[100%] max-w-[280px]; /* Adjust image size for mobile */
+  }
+
+  .verifyBtn {
+    @apply bottom-[100px]; /* Adjust button position for mobile */
+  }
+}

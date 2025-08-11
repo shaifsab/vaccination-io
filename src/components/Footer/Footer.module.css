@@ -1,0 +1,103 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+/* Footer Section Styling */
+.footerPage {
+  @apply bg-[url('../../assets/images/footer-bg.png')] bg-no-repeat bg-cover bg-center;
+  padding-top: 60px; /* Adjust top padding */
+  padding-bottom: 40px; /* Adjust bottom padding */
+  /* Adjust padding for mobile responsiveness */
+}
+
+/* Layout for Menu and Logo */
+.menuRow {
+  @apply flex flex-wrap items-center justify-between gap-10; /* Flex-wrap to stack items on small screens */
+}
+
+/* Logo Styling */
+.menuLogo {
+  @apply flex items-center;
+  width: 100%;
+  max-width: 200px;
+}
+
+.menuLogo img {
+  display: block;
+  max-width: 100%; /* Ensure image is responsive */
+}
+
+/* Menu Styling */
+.menuItems ul {
+  @apply flex gap-[25px];
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: center;
+}
+
+.menuItems ul li a {
+  @apply font-montserrat font-medium text-[24px] text-[rgba(255,255,255,.50)] focus:text-white;
+}
+
+/* Social Icon Styling */
+.images {
+  @apply flex justify-center items-center; /* Center social icon */
+}
+
+.images img {
+  max-width: 150px; /* Ensure social icons are not too large */
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .menuRow {
+    @apply flex-col items-center gap-10;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .menuItems ul {
+    @apply justify-center gap-[20px]; /* Reduce gap between menu items */
+  }
+
+  .menuLogo {
+    @apply flex justify-center items-center;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .menuItems ul li a {
+    @apply text-[20px]; /* Adjust text size for tablets */
+  }
+
+  .images img {
+    max-width: 130px; /* Adjust size of social icons for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .footerPage {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .menuItems ul {
+    @apply flex-col items-center gap-[15px]; /* Stack menu items vertically */
+  }
+
+  .menuItems ul li a {
+    @apply text-[18px]; /* Further reduce text size for mobile */
+  }
+
+  .images img {
+    max-width: 100px; /* Resize social icon for mobile */
+  }
+
+  .menuLogo {
+    @apply flex justify-center items-center;
+    margin-bottom: 20px;
+  }
+}

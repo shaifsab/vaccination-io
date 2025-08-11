@@ -1,0 +1,134 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+.bannerPage {
+  @apply bg-[url('../../assets/images/background.png')] pt-[210px] bg-no-repeat bg-cover bg-center;
+}
+
+.bannerMain {
+  @apply flex justify-between items-center; /* Ensure vertical centering */
+}
+
+.text {
+  @apply w-[603px]; /* Fixed width for text */
+}
+
+.text h4 {
+  @apply text-brandColor font-montserrat font-bold text-[24px];
+}
+
+.text h1 {
+  @apply text-white font-montserrat font-extrabold text-[48px] mt-[40px] mb-[50px];
+}
+
+.text p {
+  @apply text-[rgba(255,255,255,0.70)] font-montserrat font-bold text-[24px];
+}
+
+.button {
+  @apply flex gap-5 mt-[50px] mb-[120px];
+}
+
+.schedule {
+  @apply flex items-center gap-5 mb-5;
+}
+
+.schedule p {
+  @apply text-white font-montserrat font-bold text-[24px];
+}
+
+.bannerImage img {
+  @apply w-[622px] h-[617px]; /* Fixed width and height for image */
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .bannerMain {
+    @apply flex-col items-center; /* Stack items vertically */
+  }
+
+  .text {
+    @apply w-[100%]; /* Full width for text on medium screens */
+    text-align: center; /* Center the text */
+  }
+
+  .text h1 {
+    @apply text-[36px]; /* Smaller heading on medium screens */
+    margin-bottom: 30px;
+  }
+
+  .text p {
+    @apply text-[18px]; /* Smaller text for paragraph */
+  }
+
+  .button {
+    @apply flex-wrap justify-center mt-[30px]; /* Wrap buttons on smaller screens */
+    gap: 15px;
+  }
+
+  .bannerImage img {
+    @apply w-[400px] h-[400px]; /* Resize image on medium screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  .text h1 {
+    @apply text-[30px]; /* Further reduce heading size */
+    margin-bottom: 20px;
+  }
+
+  .text p {
+    @apply text-[16px]; /* Further reduce text size */
+  }
+
+  .button {
+    @apply gap-10; /* Reduce button gap */
+  }
+
+  .schedule p {
+    @apply text-[18px]; /* Adjust schedule text size */
+  }
+
+  .bannerImage img {
+    @apply w-[300px] h-[300px]; /* Adjust image size */
+  }
+}
+
+@media (max-width: 768px) {
+  .bannerPage {
+    @apply pt-[150px]; /* Adjust padding */
+  }
+
+  .text {
+    @apply w-[100%]; /* Full width */
+    text-align: center; /* Center text */
+  }
+
+  .text h4 {
+    @apply text-[18px]; /* Smaller subheading text */
+  }
+
+  .text h1 {
+    @apply text-[24px]; /* Further reduce heading size */
+  }
+
+  .text p {
+    @apply text-[14px]; /* Reduce paragraph size */
+  }
+
+  .button {
+    @apply flex-wrap justify-center gap-6; /* Wrap buttons with smaller gap */
+  }
+
+  .bannerImage img {
+    @apply w-[250px] h-[250px]; /* Adjust image for small screens */
+  }
+
+  .schedule p {
+    @apply text-[14px]; /* Adjust schedule text size */
+  }
+}

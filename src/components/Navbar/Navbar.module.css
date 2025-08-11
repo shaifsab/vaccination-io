@@ -1,0 +1,107 @@
+/* Navbar.module.css */
+
+.navPage {
+  @apply pt-[41px] absolute w-full hidden lg:block;
+}
+
+/* Ensure flex items align properly and menu becomes centered */
+.menuRow {
+  @apply flex items-center justify-between;
+}
+
+.menuLogo {
+  position: relative;
+  display: inline-block;
+}
+
+.menuLogo img {
+  display: block;
+}
+
+.menuLogo::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  border-radius: 100px;
+  background-color: #17C2EC;
+  transition: width 0.5s ease-out;
+}
+
+.menuLogo:hover::after {
+  width: 100%;
+}
+
+.menuItems ul {
+  @apply flex gap-[25px]; /* Keep the menu items in one line */
+}
+
+/* Menu items links */
+.menuItems ul li a {
+  @apply font-montserrat font-medium text-[24px] text-custom-gray focus:text-white;
+}
+
+/* Menu button design */
+.menuButton {
+  @apply hover:bg-brandColor transition-all duration-75 hover:text-white py-[20px] px-[26px] bg-[rgba(196,196,196,.10)] rounded-[20px] shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px];
+}
+
+.menuButton a {
+  @apply font-montserrat font-bold text-[24px] text-brandColor;
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 1280px) {
+  /* Adjust padding for tablets and small laptops */
+  .navPage {
+    @apply pt-[20px] px-4;
+  }
+
+  /* Ensure the items stay in one line and adjust their size */
+  .menuRow {
+    @apply flex items-center justify-between;
+  }
+
+  .menuItems ul {
+    @apply flex gap-[15px]; /* Keep items in one line with reduced gap */
+  }
+
+  /* Adjust font size for this range */
+  .menuItems ul li a {
+    @apply text-[20px]; /* Reduce font size */
+  }
+
+  .menuButton a {
+    @apply text-[22px]; /* Reduce font size */
+  }
+}
+
+/* Additional responsiveness for smaller screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  /* Decrease font size and adjust spacing */
+  .menuItems ul li a {
+    @apply text-[18px]; /* Further decrease font size for smaller screens */
+  }
+
+  .menuButton a {
+    @apply text-[20px];
+  }
+
+  /* Adjust layout for small mobile screens */
+  .menuRow {
+    @apply flex-col items-center;
+  }
+}
+
+/* Adjustments for very small screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .menuItems ul li a {
+    @apply text-[16px]; /* Further reduce font size for small devices */
+  }
+
+  .menuButton {
+    @apply mt-4 text-[18px];
+  }
+}

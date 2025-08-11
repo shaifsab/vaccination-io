@@ -1,0 +1,123 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+.protectsPage {
+  @apply bg-[url('../../assets/images/background-protect.png')] py-[40px] bg-no-repeat bg-cover bg-center;
+  /* Set padding and background image */
+}
+
+.protectsText {
+  @apply text-center mb-[30px];
+  /* Center text and add margin-bottom */
+}
+
+.protectsText h1 {
+  @apply text-white font-montserrat font-bold text-[36px] leading-snug;
+  /* Main heading style */
+}
+
+.protectsText p {
+  @apply text-[rgba(255,255,255,0.70)] font-montserrat font-normal text-[18px] mt-[15px];
+  /* Paragraph style */
+}
+
+.readPortion {
+  @apply flex flex-wrap justify-center gap-[20px];
+  /* Use flex-wrap to make cards responsive */
+}
+
+/* Card Styling */
+.card {
+  @apply w-full max-w-[350px] h-[380px] bg-[rgba(196,196,196,0.20)] rounded-[25px] flex flex-col items-center p-[20px];
+  /* Flex container for each card */
+}
+
+.iconContainer {
+  @apply w-[70px] h-[70px] bg-secondColor rounded-[20px] flex justify-center items-center text-white text-[40px];
+  /* Icon container styling */
+}
+
+.card h1 {
+  @apply font-montserrat font-bold text-[22px] text-white mt-[20px] mb-[15px];
+  /* Card title styling */
+}
+
+.card p {
+  @apply font-montserrat font-medium text-[16px] text-white mb-[20px];
+  /* Card paragraph styling */
+}
+
+.readmore {
+  @apply flex items-center gap-[8px] cursor-pointer;
+}
+
+.readmore h2 {
+  @apply font-montserrat font-bold text-[16px] text-brandColor;
+}
+
+.readmoreIcon {
+  @apply text-[24px] text-brandColor;
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .protectsText h1 {
+    @apply text-[32px]; /* Adjust heading size for medium screens */
+  }
+
+  .protectsText p {
+    @apply text-[16px]; /* Adjust paragraph size for medium screens */
+  }
+
+  .card {
+    @apply max-w-[300px]; /* Adjust card width */
+  }
+}
+
+@media (max-width: 1024px) {
+  .protectsText h1 {
+    @apply text-[28px]; /* Adjust heading size for smaller tablets */
+  }
+
+  .card {
+    @apply max-w-[280px]; /* Adjust card size for smaller tablets */
+  }
+
+  .readmore h2 {
+    @apply text-[14px]; /* Adjust text size for smaller screens */
+  }
+
+  .readmoreIcon {
+    @apply text-[20px]; /* Adjust icon size */
+  }
+}
+
+@media (max-width: 768px) {
+  .protectsText h1 {
+    @apply text-[24px]; /* Adjust heading size for mobile */
+  }
+
+  .protectsText p {
+    @apply text-[14px]; /* Adjust paragraph size for mobile */
+  }
+
+  .card {
+    @apply w-[90%] max-w-[300px]; /* Make cards take up most of the screen width */
+  }
+
+  .iconContainer {
+    @apply w-[60px] h-[60px] text-[30px]; /* Adjust icon size */
+  }
+
+  .readmore h2 {
+    @apply text-[12px]; /* Adjust text size for mobile */
+  }
+
+  .readmoreIcon {
+    @apply text-[18px]; /* Adjust icon size */
+  }
+}

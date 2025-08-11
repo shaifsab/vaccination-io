@@ -1,0 +1,3 @@
+.icon{
+    @apply w-[60px] h-[60px] bg-secondColor rounded-xl text-[30px] flex justify-center items-center text-brandColor
+}

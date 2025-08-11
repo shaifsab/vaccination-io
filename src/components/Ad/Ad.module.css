@@ -1,0 +1,66 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+/* Main Ad Section */
+.ad {
+  @apply h-[150px] flex items-center;
+  /* Ensure the ad section height is consistent */
+}
+
+/* Ad images container */
+.adImages {
+  @apply flex flex-wrap justify-between w-full;
+  /* Flexbox for wrapping images */
+}
+
+/* Individual image styling */
+.adImages img {
+  @apply object-contain;
+  @apply max-w-[100%]; /* Prevent images from overflowing */
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  /* On medium screens (tablets and small laptops), reduce the gap and image size */
+  .ad {
+    @apply h-[200px]; /* Increase height for better fit */
+  }
+
+  .adImages {
+    @apply gap-[20px]; /* Reduce gap between images */
+  }
+
+  .adImages img {
+    @apply max-w-[45%]; /* Reduce image size for medium screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  /* On smaller screens (tablets), stack images vertically */
+  .ad {
+    @apply h-[auto] py-[10px]; /* Adjust height and add padding */
+  }
+
+  .adImages {
+    @apply flex-col items-center gap-[15px]; /* Stack images vertically with smaller gap */
+  }
+
+  .adImages img {
+    @apply max-w-[80%]; /* Allow images to occupy more width on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  /* On mobile screens, adjust further */
+  .ad {
+    @apply h-[auto] py-[20px]; /* Add more padding on mobile */
+  }
+
+  .adImages img {
+    @apply max-w-[90%]; /* Allow images to occupy almost full width */
+  }
+}

@@ -1,0 +1,159 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+/* Main Feedback Page */
+.feedbackPage {
+  /* No specific background required */
+}
+
+/* Feedback Items */
+.feedbackItems {
+  @apply flex flex-col items-center text-center;
+  /* Center the content */
+}
+
+.feedbackItems h3 {
+  @apply text-[#17C2EC] font-montserrat font-bold text-[24px] mt-[67px] mb-[20px];
+}
+
+.feedbackItems h1 {
+  @apply text-black font-montserrat font-extrabold text-[48px] mb-[40px];
+}
+
+.feedbackItems p {
+  @apply text-[rgba(0,0,0,0.50)] font-montserrat font-medium text-[24px] mb-[100px];
+}
+
+/* Background Image */
+.covidImg {
+  @apply absolute z-[-1] mt-[250px] pb-[250px];
+}
+
+/* Card Container */
+.cardAll {
+  @apply flex gap-[53px] flex-wrap justify-center;
+  /* Flex-wrap ensures cards stack on smaller screens */
+}
+
+/* Feedback Card */
+.feedbackCard {
+  @apply w-[400px] h-[250px] bg-[rgba(196,196,196,0.50)] rounded-[20px] hover:bg-[#17C2EC] hover:shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px];
+  /* Ensure cards are responsive and change on hover */
+}
+
+/* Card Upper Section */
+.cardUpper {
+  @apply flex items-center pt-[30px] ml-[30px];
+}
+
+.cardUpper span {
+  @apply ml-[20px];
+}
+
+.cardUpper span h2 {
+  @apply text-black font-montserrat font-bold text-[24px] mb-[5px];
+}
+
+.cardUpper span p {
+  @apply text-[rgba(0,0,0,0.50)] font-montserrat font-bold text-[14px] inline;
+}
+
+/* Card Lower Section */
+.cardLowerr {
+  @apply text-center;
+}
+
+.cardLowerr p {
+  @apply text-[rgba(0,0,0,0.60)] font-montserrat font-medium text-[18px] mt-[40px];
+}
+
+.cardLowerr p span {
+  @apply text-[#17C2EC];
+}
+
+/* Responsive Design */
+
+/* For medium screens (tablets and small laptops) */
+@media (max-width: 1280px) {
+  .feedbackItems h1 {
+    @apply text-[36px]; /* Adjust heading size */
+  }
+
+  .feedbackItems p {
+    @apply text-[20px]; /* Adjust paragraph size */
+  }
+
+  .cardAll {
+    @apply gap-[20px]; /* Reduce gap between cards */
+  }
+
+  .feedbackCard {
+    @apply w-[90%]; /* Ensure cards are smaller */
+  }
+}
+
+/* For smaller screens (tablets and large phones) */
+@media (max-width: 1024px) {
+  .feedbackItems h1 {
+    @apply text-[30px]; /* Further reduce heading size */
+  }
+
+  .feedbackItems p {
+    @apply text-[18px]; /* Further reduce paragraph size */
+  }
+
+  .cardAll {
+    @apply flex-col items-center gap-[20px]; /* Stack cards vertically */
+  }
+
+  .feedbackCard {
+    @apply w-[90%] h-[300px]; /* Adjust card width and height */
+  }
+
+  .cardUpper span h2 {
+    @apply text-[20px]; /* Adjust name text size */
+  }
+
+  .cardUpper span p {
+    @apply text-[12px]; /* Adjust location text size */
+  }
+
+  .cardLowerr p {
+    @apply text-[16px]; /* Adjust feedback text size */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  .feedbackItems h1 {
+    @apply text-[24px]; /* Adjust heading size */
+  }
+
+  .feedbackItems p {
+    @apply text-[16px]; /* Adjust paragraph size */
+  }
+
+  .cardAll {
+    @apply flex-col items-center gap-[10px]; /* Stack cards with smaller gap */
+  }
+
+  .feedbackCard {
+    @apply w-[90%] h-[280px]; /* Ensure cards are smaller on mobile */
+  }
+
+  .cardLowerr p {
+    @apply text-[14px]; /* Further reduce feedback text size */
+  }
+
+  .cardUpper span h2 {
+    @apply text-[18px]; /* Further reduce name text size */
+  }
+
+  .cardUpper span p {
+    @apply text-[10px]; /* Further reduce location text size */
+  }
+}

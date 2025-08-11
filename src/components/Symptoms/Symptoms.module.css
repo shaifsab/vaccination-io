@@ -1,0 +1,18 @@
+.symptomsPage{
+    @apply bg-[url('../../assets/images/background.png')] bg-no-repeat bg-cover bg-center;
+}
+.symptomsItems{
+    @apply flex flex-col items-center
+}
+.symptomsPage h3{
+    @apply text-white font-montserrat font-bold text-[24px] mt-[67px] mb-[20px]
+}
+.symptomsPage h1{
+    @apply text-[#17C2EC] font-montserrat font-extrabold text-[48px] mb-[40px]
+}
+.symptomsPage span{
+    @apply text-[#FFFFFF] font-montserrat font-extrabold text-[48px]
+}
+.symptomsPage p{
+    @apply text-[rgba(255,255,255,0.50)] font-montserrat font-medium text-[24px] mb-[179px]
+}

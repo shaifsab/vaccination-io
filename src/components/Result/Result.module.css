@@ -1,0 +1,116 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+/* Background and padding */
+.resultPage {
+  @apply bg-[url('../../assets/images/background-result.png')] py-[63px] bg-no-repeat bg-cover bg-center;
+}
+
+/* Result Box styling */
+.resultBox {
+  @apply w-full h-[340px] bg-[rgba(196,196,196,0.10)] rounded-[20px];
+}
+
+/* Top part of the result box */
+.resultBoxItems {
+  @apply w-full h-[101px] rounded-t-[20px] bg-[rgba(196,196,196,0.10)] flex items-center;
+}
+
+.resultBox p {
+  @apply text-white font-montserrat font-bold text-[24px] ml-[93px];
+}
+
+/* Input field styling */
+.inputItem {
+  @apply flex gap-20 my-[35px];
+}
+
+/* Input box styling */
+.inputItem input {
+  @apply w-[450px] h-[69px] rounded-[20px] bg-transparent text-white font-montserrat font-bold text-[24px] pl-[25px] ring-[3px] ring-[rgba(196,196,196,0.15)] focus:ring-[#17C2EC] p-2;
+}
+
+/* Button styling */
+.inputItem button {
+  @apply text-white font-montserrat font-bold text-[24px] bg-secondColor px-[47px] py-[17px] border-[3px] border-[#17C2EC] rounded-[20px] inline-block hover:bg-[#17C2EC] transition-all duration-75;
+}
+
+/* Text below the input box */
+.inputField h3 {
+  @apply text-[#17C2EC] font-montserrat font-bold text-[24px] py-[20.5px] px-[175px] rounded-[20px] mb-[31px] bg-[rgba(196,196,196,0.15)];
+}
+
+/* Center the input field */
+.inputField {
+  @apply flex flex-col items-center;
+}
+
+/* Responsive Design for medium and smaller screens */
+@media (max-width: 1280px) {
+  /* Adjust the height of the result box */
+  .resultBox {
+    @apply h-[auto] py-[20px]; /* Reduce the height */
+  }
+
+  .resultBox p {
+    @apply text-[20px] ml-[50px]; /* Smaller text size and margin */
+  }
+
+  .inputItem {
+    @apply flex-col items-center gap-5; /* Stack inputs vertically */
+  }
+
+  .inputItem input {
+    @apply w-[80%] text-[20px]; /* Make inputs smaller and responsive */
+  }
+
+  .inputItem button {
+    @apply w-[80%] text-[20px]; /* Make button responsive */
+  }
+
+  .inputField h3 {
+    @apply px-[50px] text-[18px]; /* Adjust the size of the text */
+  }
+}
+
+@media (max-width: 1024px) {
+  /* For smaller tablets and large phones */
+  .inputItem input {
+    @apply w-[90%] text-[18px]; /* Make inputs smaller on smaller screens */
+  }
+
+  .inputItem button {
+    @apply w-[90%] text-[18px]; /* Adjust button width and text size */
+  }
+
+  .inputField h3 {
+    @apply text-[16px] px-[20px]; /* Smaller text size */
+  }
+
+  .resultBox p {
+    @apply text-[18px] ml-[30px]; /* Adjust text size and margin */
+  }
+}
+
+@media (max-width: 768px) {
+  /* For mobile screens */
+  .inputItem input {
+    @apply w-[95%] text-[16px]; /* Make input width take up almost all space */
+  }
+
+  .inputItem button {
+    @apply w-[95%] text-[16px]; /* Adjust button width for small screens */
+  }
+
+  .inputField h3 {
+    @apply text-[14px] px-[10px]; /* Further reduce text size */
+  }
+
+  .resultBox p {
+    @apply text-[16px] ml-[20px]; /* Further reduce text size and margin */
+  }
+}

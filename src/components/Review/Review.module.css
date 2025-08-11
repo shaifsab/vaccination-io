@@ -1,0 +1,7 @@
+.feedbackCard{
+    @apply w-[400px] h-[250px] bg-[rgba(196,196,196,0.50)] rounded-[20px]
+
+
+
+    hover:bg-[#17C2EC] hover:text-white
+}

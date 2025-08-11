@@ -1,0 +1,112 @@
+/* BannerBottom.module.css */
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+/* Banner bottom container */
+.bannerBottom {
+  @apply w-full h-[160px] bg-[rgba(196,196,196,0.15)] rounded-t-[20px] flex items-center justify-center gap-[137px];
+  /* Ensure proper height and center alignment */
+}
+
+/* Icons container */
+.icon {
+  @apply flex gap-[50px];
+  /* Flex layout for icons with spacing */
+}
+
+.iconItem {
+  @apply flex items-center;
+  /* Align icons vertically */
+}
+
+.card {
+  @apply ml-5;
+  /* Add margin left for spacing between icon and card */
+}
+
+.card p {
+  @apply text-thirdColor font-montserrat font-semibold text-[24px];
+}
+
+.card h4 {
+  @apply text-white font-montserrat font-bold text-[24px];
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  /* Adjust height and gap for medium screens */
+  .bannerBottom {
+    @apply h-[180px] gap-[40px]; /* Adjust height and gap for medium screens */
+  }
+
+  /* Ensure the icons stay in a row */
+  .icon {
+    @apply flex-row gap-[30px]; /* Reduce gap between icons */
+  }
+
+  /* Adjust the icon items */
+  .iconItem {
+    @apply flex items-center;
+  }
+
+  .card p, .card h4 {
+    @apply text-[20px]; /* Adjust text size for better fit */
+  }
+
+  .card h4 {
+    @apply text-[22px]; /* Adjust vaccine type text size */
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Stack the items vertically for smaller screens */
+  .bannerBottom {
+    @apply flex-col items-center h-auto py-[20px] gap-[40px]; /* Stack vertically */
+  }
+
+  /* Icons become vertical */
+  .icon {
+    @apply flex-col items-center gap-[20px]; /* Stack icons vertically */
+  }
+
+  .iconItem {
+    @apply flex flex-col items-center gap-2; /* Center icons vertically */
+  }
+
+  /* Adjust text size for smaller screens */
+  .card p, .card h4 {
+    @apply text-[16px]; /* Further reduce text size for smaller screens */
+  }
+
+  .card h4 {
+    @apply text-[18px]; /* Adjust vaccine type text size */
+  }
+}
+
+@media (max-width: 768px) {
+  /* For very small screens, further adjust padding and gap */
+  .bannerBottom {
+    @apply py-[15px] gap-[20px]; /* Reduce padding and gap */
+  }
+
+  .icon {
+    @apply flex-col items-center gap-[15px]; /* Stack icons with smaller gap */
+  }
+
+  .card p, .card h4 {
+    @apply text-[14px]; /* Reduce text size for very small screens */
+  }
+
+  .card h4 {
+    @apply text-[16px]; /* Adjust vaccine type text size */
+  }
+
+  .iconItem {
+    @apply flex flex-col items-center gap-2; /* Stack items with small gap */
+  }
+}
